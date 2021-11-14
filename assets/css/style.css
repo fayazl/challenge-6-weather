@@ -1,0 +1,7 @@
+header{
+    background-size: cover;
+    color:white;
+    background-color:rgb(67, 61, 155);
+    display: flex;
+    padding: 1rem;
+}
