@@ -40,11 +40,17 @@
                       <div class="row">
                         <div id="currentcity" class="col-11 m-4 bg-light border border-dark">
                             <div class="card-body p-0 m-2">
-                                <h3 id="city-name" class="fw-bolder"></h3>
-                                <p id="temp" class="fs-5 pt-4"></p>
-                                <p id="wind" class="fs-5"></p>
-                                <p id="humidity" class="fs-5"></p>
-                                <p id="uv-index" class="fs-5"></p>
+                                <div class="row">
+                                    <h3 id="city-name" class="fw-bolder col-2"></h3>
+                                    <h3 id="datetoday" class="fw-bolder col-2"></h3>
+                                    <i></i>
+                                </div>
+                                <div>
+                                    <p id="temp" class="fw-bolder"></p>
+                                    <p id="wind" class="fs-5"></p>
+                                    <p id="humidity" class="fs-5"></p>
+                                    <p id="uv-index" class="fs-5"></p>
+                                </div>
                             </div>
                         </div>
                       </div>
@@ -64,6 +70,8 @@
         </main>
 
 <script src="./assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 </body>
 
 
