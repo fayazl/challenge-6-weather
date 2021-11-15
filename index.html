@@ -19,28 +19,52 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    
-                    <!-- Input form and search bar -->
-                    <div class="col-lg-3 m-4 pb-4 border-bottom border-dark">
-                            <div class="form-group">
-                              <h3><label for="citysearch">Search for a City:</label></h3>
-                              <input type="text" class="form-control" id="citysearch" placeholder="San Diego">
-                            </div>
-                                <button class="btn btn-primary col-lg-12" type="button">Search</button>
-                            </div>
-                            <div>
-                                <ul id="city-results" class="list-group mt-4">Test City</ul>
-                            </div>
+                  <div class="col-3">
+                    <div class="form-group m-4">
+                        <form id="input-form">
+                            <h3><label for="searchbox">Search for a City:</label></h3>
+                            <input type="text" class="form-control" id="searchbox" placeholder="San Diego">
+                            <button class="btn btn-primary mt-3 col-12" type="submit">Search</button>
+                        </form>
+                        <div id="history" class="pt-4 history">
+                        </div>
                     </div>
+                  </div>
 
-
-                    <!-- Search History -->
-                </div>            
-            </div>
-
-                
-
+                  <div class="col-9 bg-light">
+                    <div class="row">
+                        <div class="col-12 mt-4 bg-light">
+                            <h4 class="fw-bolder">Current City</h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div id="currentcity" class="col-11 m-4 bg-light border border-dark">
+                            <div class="card-body p-0 m-2">
+                                <h3 id="city-name" class="fw-bolder"></h3>
+                                <p id="temp" class="fs-5 pt-4"></p>
+                                <p id="wind" class="fs-5"></p>
+                                <p id="humidity" class="fs-5"></p>
+                                <p id="uv-index" class="fs-5"></p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 mt-2 bg-light">
+                            <h4 class="fw-bolder">5 Day Forecast</h4>
+                        </div>
+                      </div>
+                      <div class="row ml-1">
+                            <div id="forecast1" class="card-body col-2 m-2 bg-light border border-dark"></div>
+                            <div id="forecast2" class="card-body col-2 m-2 bg-light border border-dark"></div>
+                            <div id="forecast3" class="card-body col-2 m-2 bg-light border border-dark"></div>
+                            <div id="forecast4" class="card-body col-2 m-2 bg-light border border-dark"></div>
+                            <div id="forecast5" class="card-body col-2 m-2 bg-light border border-dark"></div>
+                      </div>
+                  </div>
         </main>
 
+<script src="./assets/js/script.js"></script>
 </body>
+
+
 </html>
