@@ -6,6 +6,7 @@ var currentCityName = document.querySelector("#city-name");
 var forecastEl = document.querySelector("forecast1")
 var appID = 'e8ff1c915669e501ef5ce09733f67d05'
 var cities = []
+var pastSearchButtonEl = document.querySelector("#historical");
 
 var submitForm = function(event) {    
     
@@ -22,7 +23,7 @@ var submitForm = function(event) {
     }    
 
     saveSearch();
-    // pastSearch(cityName);
+    pastSearch(cityName);
 
 };
 
@@ -30,16 +31,6 @@ var submitForm = function(event) {
 var saveSearch = function(){
   localStorage.setItem("cities", JSON.stringify(cities))
 }
-
-
-
-
-// Save new cities to localStorag
-
-
-
-//generate historical searches
-
 
 
 //Get Weather Data
@@ -250,6 +241,24 @@ var displayWeatherData = function(data,cityName){
     
 } 
 
+var pastSearch = function(pastSearch){
+
+  pastSearchEl = document.createElement("button");
+  pastSearchEl.textContent = pastSearch;
+  pastSearchEl.classList = "form-control";
+  pastSearchEl.setAttribute("data-city", pastSearch)
+  pastSearchEl.setAttribute("type", "submit");
+
+  pastSearchButtonEl.prepend(pastSearchEl);
+}
+
+var pastSearchHandler = function(event){
+  var cityName = event.target.getAttribute("data-city")
+  if(cityName){
+      getWeatherData(cityName)
+  }
+}
+
 
 cityForm.addEventListener("submit", submitForm);
-
+pastSearchButtonEl.addEventListener("click", pastSearchHandler);
