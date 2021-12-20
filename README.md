@@ -10,5 +10,12 @@
 
 ## Once we click on the historical searches, then you are presented with the relevant data.
 
-## See screenshot and link to deployed application below.
+## See screenshot and links to repo and deployed application below.
+
+Github Repo: https://github.com/fayazl/challenge-6-weather
+Deployed URL: https://fayazl.github.io/challenge-6-weather/
+
+<img src="/WeatherDash.png"></img>
+
+
 
