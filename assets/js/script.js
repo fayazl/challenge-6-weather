@@ -5,7 +5,7 @@ var currentCityEl = document.querySelector("currentcity")
 var currentCityName = document.querySelector("#city-name");
 var forecastEl = document.querySelector("forecast1")
 var appID = 'e8ff1c915669e501ef5ce09733f67d05'
-
+var cities = []
 
 var submitForm = function(event) {    
     
@@ -15,19 +15,34 @@ var submitForm = function(event) {
     
     if (cityName) {
         getWeatherData(cityName);
+        cities.unshift({cityName})
         cityInput.value = "";
     } else {
         alert("Please Enter a City Name")
-    }
+    }    
+
+    saveSearch();
+    // pastSearch(cityName);
+
 };
+
+
+var saveSearch = function(){
+  localStorage.setItem("cities", JSON.stringify(cities))
+}
+
+
+
+
+// Save new cities to localStorag
+
+
 
 //generate historical searches
 
 
 
-
-
-// var appendHistory
+//Get Weather Data
 
 var getWeatherData = function(cityName){
 
@@ -234,12 +249,6 @@ var displayWeatherData = function(data,cityName){
     
     
 } 
-
-var clearForm = function() {
-  document.getElementById('test').innerHTML="";
-} 
-
-
 
 
 cityForm.addEventListener("submit", submitForm);
